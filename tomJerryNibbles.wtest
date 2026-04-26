@@ -43,5 +43,15 @@ describe "Tests de Tom" {
     assert.equals(24, tom.velocidadMax())
   }
 
+  test "Tom puede cazar a un ratón a 1o metros" {
+    assert.that(tom.puedeCazarRaton(10))
+  }
+
+}
+
+describe "Tests de nuevo ratón Pepe" {
+  test "Pepe pesa 15" {
+    assert.equals(15, pepe.peso())
+  }
 }
 

@@ -9,6 +9,15 @@ object tom {
     method comer(raton) {
       energia = energia + 12 + raton.peso()
     }
+
+    method puedeCazarRaton(distancia) = distancia / 2 < energia
+
+    method cazarRaton(raton, distancia) {
+      if (self.puedeCazarRaton(distancia)){
+        self.correr(distancia)
+        self.comer(raton)
+      }
+    }
 }
 
 object jerry {
@@ -24,4 +33,6 @@ object nibbles {
   method peso() = 35
 }
 
-// Inventar otro ratón
+object pepe {
+  method peso() = 15
+}
